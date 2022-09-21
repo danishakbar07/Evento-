@@ -1,0 +1,81 @@
+@font-face {
+    font-family:atma ;
+    src: url('../../../assets/Fonts/Atma-Bold.ttf');
+}
+@font-face {
+    font-family:Madurai ;
+    src: url('../../../assets/Fonts/ArimaMadurai-Bold.ttf');
+}
+.background{
+    background-image: url('../../../assets/Images/Bg.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+
+height: 100vh;
+
+}
+.heading{
+    
+   height: 20vh;
+}
+
+.first{
+    color: rgba(255, 251, 251, 1);
+    font-family:atma;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 113px;
+}
+.second{
+    color: rgba(233, 189, 36, 1);
+    font-family:'atma';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 113px;
+}
+.space{
+padding: 20px;
+
+}
+.subfirst{
+    font-family:  Madurai;
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 82px;
+color: rgba(255, 255, 255, 1);
+
+}
+.subsecond{
+    font-family:  Madurai;
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 82px;
+//color: rgba(29, 26, 24, 1);
+color:black
+
+}
+.btn{
+    margin-top: 100px;
+}
+.hlo{
+    border-radius: 30px;
+    background-color: black;
+
+    color:white;
+    padding: 10px 60px 10px 60px;
+}
+p{
+    font-family: 'Inter';
+font-style: italic;
+font-weight: 900;
+font-size: 20px;
+line-height: 36px;
+
+color: #FFFFFF;
+
+backdrop-filter: blur(2px);
+}

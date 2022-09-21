@@ -1,0 +1,130 @@
+<!-- <div class="container-fluid text-center">
+    <div class="row justify-content-center align-items-center pt-5">
+        <div class="col-md-4 col-sm-6  ">
+    <mat-card >
+        <mat-card-title class="text-white">
+            Sign Up
+        </mat-card-title>
+        <mat-card-content>
+            <form (ngSubmit)="onSubmit(myform)" #myform="ngForm">
+            <p class="pt-3">
+
+           
+            <mat-form-field  appearance="outline">
+                <mat-label>
+                    Name
+                </mat-label>
+                <input matInput name="name" ngModel >
+               
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>
+                    Email
+                </mat-label>
+                <input matInput required name="email" ngModel >
+            </mat-form-field>
+        </p>
+        <p>
+            
+                
+            
+                
+                <mat-radio-group >
+
+                  <mat-radio-button value="auto" ngModel>  <span class="material-icons" >
+                    man
+                    </span>Male</mat-radio-button>
+                  
+                 
+                  <mat-radio-button value="always"ngModel
+                  ><span class="material-icons" >
+                    woman
+                    </span>     
+                     female</mat-radio-button>
+                </mat-radio-group>
+              
+            
+        </p>
+        <p>
+            
+                 <mat-form-field appearance="outline" >
+                  <mat-label>Phone number</mat-label>
+                  <input matInput name="number" ngModel>
+                  <mat-icon matSuffix>phone</mat-icon>
+                  <mat-hint>Include area code</mat-hint>
+                </mat-form-field>
+              
+               
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput name="password" [type]="hide ? 'password' : 'text'" ngModel>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+        </p>
+        <p>
+            
+            <input type="submit" value="submit" id="button" class="btn text-white" > 
+        </p>
+    </form>
+        </mat-card-content>
+         <mat-card-actions >
+        
+         </mat-card-actions>
+    </mat-card>
+</div>
+    </div>
+</div> -->
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title >Register</mat-card-title>
+      </mat-card-header>
+      <form class="example-form mt-5" (ngSubmit)="onSubmit()" #signupform="ngForm">
+        <mat-card-content>
+          <mat-form-field class="example-full-width" appearance="outline"  >
+            <mat-label>Name</mat-label>
+            <input matInput  name="name" ngModel required>
+            <mat-icon matSuffix>perm_identity</mat-icon>
+            
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label >Email</mat-label>
+            <input matInput  name="email" ngModel required email>
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error>Invalid Email</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline" > 
+            <mat-label>Phone number</mat-label>
+            <input matInput name="number" ngModel required #number="ngModel" >
+            <mat-icon matSuffix>phone</mat-icon>
+             <mat-error>Phone number should be of 10 digits</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Enter your password</mat-label>
+            <input matInput name="password" [type]="hide ? 'password' : 'text'" ngModel required>
+            <button mat-icon-button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Choose </mat-label>
+            <mat-select  name="role" ngModel   >
+              <mat-option      *ngFor="let roles of Roles" [value]="roles" >{{roles}}
+              </mat-option>
+            </mat-select>
+            <mat-icon matSuffix>expand_more</mat-icon>
+          </mat-form-field>
+        </mat-card-content>
+        <button type="submit" mat-stroked-button color="primary" [disabled]="signupform.invalid" [ngStyle]="{border:signupform.invalid ? '1px solid red':'1px solid green'}" class="btn-block" >Register</button>
+      </form>
+      <div class="div">
+        <span class="last">If you already have an account please <span class="sign"><a routerLink="login" > signin here </a></span></span>
+      </div>
+    </mat-card>
+  </div>
